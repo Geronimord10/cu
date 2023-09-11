@@ -1,6 +1,6 @@
 import { Then } from "@badeball/cypress-cucumber-preprocessor";
 
-Then(`leo la siguiente tabla aplicando Hashed`, (table) => {
+Then(`leo la siguiente tabla aplicando Hashes`, (table) => {
     table = table.hashes();
 
     cy.log(table);

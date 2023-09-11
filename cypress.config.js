@@ -4,6 +4,9 @@ const addCucumberPreprocessorPlugin = require("@badeball/cypress-cucumber-prepro
 const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
 
 module.exports = defineConfig({
+  env: {
+    TAGS: "not @ignore"
+  },
   e2e: {
     specPattern: "cypress/e2e/features/**/*.feature",
     async setupNodeEvents(on, config) {
@@ -15,4 +18,12 @@ module.exports = defineConfig({
       return config;
     },
   },
+  viewportWidth: 1536,
+  viewportHeight: 960,
+  video: false,
+  retries: {
+    openMode: 2,
+    runMode: 0,
+  },
+  defaultCommandTimeout: 8000,
 });
