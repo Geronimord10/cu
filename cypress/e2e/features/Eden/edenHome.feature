@@ -16,3 +16,10 @@ Feature: test de la pagina de Eden
             | dia    | 10                |
             | mes    | febrero           |
             | hora   | 14:00             |
+
+    @focus
+    Scenario: verificar precio de 1 cuarteto
+        Given que un usuario esta en la pagina de "Eden"
+        When presiona el boton del header "CUARTETOS"
+        And presiona el boton ver de "El Loco Amato"
+        Then el precio que se visualiza tiene el formato correcto

@@ -5,7 +5,9 @@ const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esb
 
 module.exports = defineConfig({
   env: {
-    TAGS: "not @ignore"
+    TAGS: "not @ignore",
+    YVYTU_URL: "https://vientosdelaselva.com.ar/#reserva/",
+    EDEN_URL: "https://www.edenentradas.com.ar/"
   },
   e2e: {
     specPattern: "cypress/e2e/features/**/*.feature",

@@ -10,6 +10,22 @@ When(`hace click en la sugerencia {string}`, (suggestionTxt) => {
     EdenHome.getSearchSuggestions().contains(suggestionTxt).click();
 });
 
+When(`presiona el boton del header {string}`, (btnName) => {
+    EdenHome.getNavBarbtn().contains(btnName).click();
+});
+
+When(`presiona el boton ver de "string"`, (showName) => {
+    EdenHome.getEventBlock().contains(showName).parent().parent().parent().find("a").last().click();
+});
+
+Then(`el precio que se visualiza tiene el formato correcto`, () => {
+    /*const precio = new RegExp(
+      "$ [0-9]{1,3}.[0-9]{3},[0-9]{2} + $ [0-9]{1,3}.[0-9]{3},[0-9]{2}"
+    );*/
+    const precio = new RegExp("[0-9]{1,3}.[0-9]{3},[0-9]{2}");
+    EdenHome.getEventPrice().contains(precio);
+});
+
 Then(`se verifica que el titulo es {string}`, (eventTitle) => {
     edenEvent.getEventTitle().should("contain.text", eventTitle);
 });
