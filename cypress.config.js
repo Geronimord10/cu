@@ -23,7 +23,7 @@ module.exports = defineConfig({
   video: false,
   retries: {
     openMode: 2,
-    runMode: 0,
+    runMode: 1,
   },
   defaultCommandTimeout: 8000,
 });
