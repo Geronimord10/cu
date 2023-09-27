@@ -8,6 +8,8 @@ module.exports = defineConfig({
     TAGS: "not @ignore",
     YVYTU_URL: "https://vientosdelaselva.com.ar/#reserva/",
     EDEN_URL: "https://www.edenentradas.com.ar/",
+    CLARO_URL: "https://tienda.claro.com.ar/",
+    DEXTER_URL: "https://www.dexter.com.ar/",
   },
   e2e: {
     specPattern: "cypress/e2e/features/**/*.feature",

@@ -24,14 +24,14 @@ Feature: test de la pagina de Eden
         And presiona el boton ver de "El Loco Amato"
         Then el precio que se visualiza tiene el formato correcto
 
-
+    @focus
     Scenario: verificar precio usando intercept
         Given que un usuario esta en la pagina de "Eden"
         When presiona el boton del header "CUARTETOS"
         And presiona el boton ver de "1"
         Then el precio que se visualiza tiene el formato correcto validado con la respuesta del intercept
 
-    @focus
+
     Scenario: verificar precio llamando al servicio
         Given que un usuario esta en la pagina de "Eden"
         When presiona el boton del header "CUARTETOS"
