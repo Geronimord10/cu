@@ -6,10 +6,23 @@ const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esb
 module.exports = defineConfig({
   env: {
     TAGS: "not @ignore",
+    //config url
     YVYTU_URL: "https://vientosdelaselva.com.ar/#reserva/",
     EDEN_URL: "https://www.edenentradas.com.ar/",
     CLARO_URL: "https://tienda.claro.com.ar/",
     DEXTER_URL: "https://www.dexter.com.ar/",
+    STORE_URL: "https://automationteststore.com/",
+    // config usuarios
+    users: [
+      {
+        user: "geroautom",
+        pass: "automation"
+      },
+      {
+        user: "geroepaaa",
+        pass: "llalalala"
+      }
+    ]
   },
   e2e: {
     specPattern: "cypress/e2e/features/**/*.feature",
