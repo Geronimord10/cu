@@ -11,3 +11,7 @@ Given(`que un usuario esta en la pagina de {string}`, (urlName) => {
     const url = Cypress.env(`${urlName.toUpperCase()}_URL`);
     cy.visit(url);
 });
+
+Then(`se compara {string} con la imagen base`, (imgName) => {
+    cy.compareSnapshot(imgName)
+})

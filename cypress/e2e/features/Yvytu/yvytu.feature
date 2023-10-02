@@ -39,4 +39,7 @@ Feature: Home Yvytu
                         | num | nombreCab | item                                                                                     |
                         | 1   | Yaguareté | Para 4 personas, 2 habitaciones, Baño con ducha, Ropa de cama, Wi-fi, Aire acondicionado |
                         | 2   | Arasari   | Para 4 personas, 2 habitaciones, Baño con ducha, Ropa de cama, Wi-fi                     |
-
+        @focus
+        Scenario: visual testing
+                Given que un usuario esta en la pagina de "Yvytu"
+                Then se compara "home pageyvytu" con la imagen base
