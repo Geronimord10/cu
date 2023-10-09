@@ -12,6 +12,7 @@ module.exports = defineConfig({
     CLARO_URL: "https://tienda.claro.com.ar/",
     DEXTER_URL: "https://www.dexter.com.ar/",
     STORE_URL: "https://automationteststore.com/",
+    HIPERLIBERTAD_URL: "https://www.hiperlibertad.com.ar/",
     // config usuarios
     users: [
       {
@@ -21,10 +22,11 @@ module.exports = defineConfig({
       {
         user: "geroepaaa",
         pass: "llalalala"
-      }
-    ]
+      },
+    ],
   },
   e2e: {
+    hideXHRInCommandLog: true,
     specPattern: "cypress/e2e/features/**/*.feature",
     async setupNodeEvents(on, config) {
       const bundler = createBundler({
@@ -32,7 +34,7 @@ module.exports = defineConfig({
       });
       on("file:preprocessor", bundler);
       await addCucumberPreprocessorPlugin(on, config);
-      require("cypress-image-diff-js/plugin")(on, config);
+      //require("cypress-image-diff-js/plugin")(on, config);
       return config;
     },
   },
@@ -40,8 +42,8 @@ module.exports = defineConfig({
   viewportHeight: 960,
   video: false,
   retries: {
-    openMode: 2,
-    runMode: 1,
+    openMode: 0,
+    runMode: 0,
   },
   defaultCommandTimeout: 8000,
 });

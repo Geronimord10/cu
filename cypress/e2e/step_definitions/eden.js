@@ -14,10 +14,17 @@ When(`presiona el boton del header {string}`, (btnName) => {
     EdenHome.getNavBarbtn().contains(btnName).click();
 });
 
-When(`presiona el boton ver de "string"`, (showName) => {
+When(`presiona el boton ver de {string}`, (showName) => {
     cy.intercept("GET", "FUNC022211").as("getshow");
     if (isNaN(showName)) {
-        EdenHome.getEventBlock().contains(showName).parent().parent().find("a").last().click();
+        EdenHome
+            .getEventBlock()
+            .contains(showName)
+            .parent()
+            .parent()
+            .find("a")
+            .last()
+            .click();
     } else {
         EdenHome.getEventBlock().eq(showName - 1).parent().parent().find("a").last().click();
     }

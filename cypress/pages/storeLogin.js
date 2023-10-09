@@ -10,6 +10,12 @@ class StorePagelogin {
     getloginButton() {
         return cy.get('[title="Login"]')
     }
+
+    login(user, pass) {
+        this.getLoginInput().type(user);
+        this.getPassInput().type(pass);
+        this.getLoginBtn().click();
+    }
 }
 
 module.exports = new StorePagelogin();

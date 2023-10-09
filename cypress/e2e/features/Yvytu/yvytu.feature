@@ -30,7 +30,7 @@ Feature: Home Yvytu
                 When el usuario hace scroll hasta "Nuestras cabañas"
                 Then se verifica que la cabaña "1" llamada "Yaguareté" posee las siguientes caracteristicas "Para 4 personas, 2 habitaciones, Baño con ducha, Ropa de cama, Wi-fi, Aire acondicionado"
                 And se verifica que la cabaña "2" llamada "Arasari" posee las siguientes caracteristicas "Para 4 personas, 2 habitaciones, Baño con ducha, Ropa de cama, Wi-fi"
-
+        @ignore
         Scenario Outline: Verificar cabaña <num>: <nombreCab>
                 Given que un usuario esta en la pagina de "Yvytu"
                 When el usuario hace scroll hasta "Nuestras cabañas"
@@ -39,7 +39,7 @@ Feature: Home Yvytu
                         | num | nombreCab | item                                                                                     |
                         | 1   | Yaguareté | Para 4 personas, 2 habitaciones, Baño con ducha, Ropa de cama, Wi-fi, Aire acondicionado |
                         | 2   | Arasari   | Para 4 personas, 2 habitaciones, Baño con ducha, Ropa de cama, Wi-fi                     |
-        @focus
+
         Scenario: visual testing
                 Given que un usuario esta en la pagina de "Yvytu"
                 Then se compara "home pageyvytu" con la imagen base

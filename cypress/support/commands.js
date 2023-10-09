@@ -25,7 +25,6 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import "cypress-real-events";
 import storeLogin from "../pages/storeLogin";
-const storelogin = require("../../pages/storeLogin");
 
 Cypress.Commands.add('login', (user, password) => {
     storeLogin.getLoginInput().type(userData.user)

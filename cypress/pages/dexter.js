@@ -9,4 +9,4 @@ class DexterPage {
     }
 }
 
-module.exports = new DexterPage()
+module.exports = new DexterPage();
