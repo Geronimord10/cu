@@ -15,6 +15,7 @@ module.exports = defineConfig({
     DEXTER_URL: "https://www.dexter.com.ar/",
     STORE_URL: "https://automationteststore.com/",
     HIPERLIBERTAD_URL: "https://www.hiperlibertad.com.ar/",
+    STARPLUS_URL: "https://www.starplus.com/es-419/home",
     //Configuración de los usuarios
     users: [
       {

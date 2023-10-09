@@ -36,6 +36,10 @@ When(
   }
 );
 
+Then(`se verifica que la url contiene {string}`, (url) => {
+  cy.url().should("include", url);
+});
+
 Then(`se verifica que la url es {string}`, (url) => {
   cy.url().should("eq", url);
 });
